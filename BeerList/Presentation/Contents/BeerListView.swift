@@ -27,6 +27,7 @@ struct BeerListView : View {
     }
 }
 
+
 #if DEBUG
  struct BeerListView_Previews : PreviewProvider {
     static var previews: some View {
