@@ -22,8 +22,8 @@ struct BeerListView : View {
                             .listRowInsets(EdgeInsets())
                     }
                 }
-            }
-        }.navigationBarTitle(Text("Beers"))
+            }.navigationBarTitle(Text("Beers"))
+        }
     }
 }
 
