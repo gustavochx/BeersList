@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		19C7310822B0343500455DB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C7310722B0343500455DB6 /* AppDelegate.swift */; };
 		19C7310A22B0343500455DB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C7310922B0343500455DB6 /* SceneDelegate.swift */; };
-		19C7310C22B0343500455DB6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C7310B22B0343500455DB6 /* ContentView.swift */; };
 		19C7310E22B0343F00455DB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19C7310D22B0343F00455DB6 /* Assets.xcassets */; };
 		19C7311122B0343F00455DB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19C7311022B0343F00455DB6 /* Preview Assets.xcassets */; };
 		19C7311422B0343F00455DB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C7311222B0343F00455DB6 /* LaunchScreen.storyboard */; };
@@ -22,14 +21,12 @@
 		19C7313422B0482F00455DB6 /* BeerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C7313322B0482F00455DB6 /* BeerListView.swift */; };
 		19C7313622B04D5B00455DB6 /* BeerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C7313522B04D5B00455DB6 /* BeerImage.swift */; };
 		19C7313822B0513A00455DB6 /* BeerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C7313722B0513A00455DB6 /* BeerRow.swift */; };
-		19C7313A22B058EF00455DB6 /* BeerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C7313922B058EF00455DB6 /* BeerResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		19C7310422B0343500455DB6 /* BeerList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19C7310722B0343500455DB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19C7310922B0343500455DB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = Presentation/SceneDelegate.swift; sourceTree = "<group>"; };
-		19C7310B22B0343500455DB6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		19C7310D22B0343F00455DB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19C7311022B0343F00455DB6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		19C7311322B0343F00455DB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,7 +40,6 @@
 		19C7313322B0482F00455DB6 /* BeerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListView.swift; sourceTree = "<group>"; };
 		19C7313522B04D5B00455DB6 /* BeerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerImage.swift; sourceTree = "<group>"; };
 		19C7313722B0513A00455DB6 /* BeerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRow.swift; sourceTree = "<group>"; };
-		19C7313922B058EF00455DB6 /* BeerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +143,6 @@
 				19C7312B22B03C7000455DB6 /* Beer.swift */,
 				19C7313122B03EE000455DB6 /* BeerData.swift */,
 				19C7313522B04D5B00455DB6 /* BeerImage.swift */,
-				19C7313922B058EF00455DB6 /* BeerResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -164,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				19C7313322B0482F00455DB6 /* BeerListView.swift */,
-				19C7310B22B0343500455DB6 /* ContentView.swift */,
 			);
 			path = Contents;
 			sourceTree = "<group>";
@@ -246,12 +240,10 @@
 				19C7312322B038C400455DB6 /* Client.swift in Sources */,
 				19C7313622B04D5B00455DB6 /* BeerImage.swift in Sources */,
 				19C7312C22B03C7000455DB6 /* Beer.swift in Sources */,
-				19C7310C22B0343500455DB6 /* ContentView.swift in Sources */,
 				19C7313222B03EE000455DB6 /* BeerData.swift in Sources */,
 				19C7312722B03A7800455DB6 /* PunkEndpoint.swift in Sources */,
 				19C7312522B038D000455DB6 /* Endpoint.swift in Sources */,
 				19C7313822B0513A00455DB6 /* BeerRow.swift in Sources */,
-				19C7313A22B058EF00455DB6 /* BeerResponse.swift in Sources */,
 				19C7312922B03B2600455DB6 /* PunkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
