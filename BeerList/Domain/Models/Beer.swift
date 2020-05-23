@@ -9,18 +9,22 @@
 import UIKit
 import SwiftUI
 
-struct Beer: Hashable, Decodable, Identifiable {
+struct Beer: Hashable, Identifiable {
 
     var id: Int64
     var name: String
     var description: String
-    var image_url: URL
-
+    var image_url: String
+    
+    func getUrl() -> URL {
+        return URL(string: self.image_url)!
+    }
+    
 }
 
 extension Beer {
 
     static var fake: Beer {
-        Beer(id: 1, name: "Buzz", description: "A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.", image_url: URL(fileURLWithPath: "https://images.punkapi.com/v2/keg.png"))
+        Beer(id: 1, name: "Buzz", description: "A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.", image_url: "https://images.punkapi.com/v2/keg.png")
     }
 }

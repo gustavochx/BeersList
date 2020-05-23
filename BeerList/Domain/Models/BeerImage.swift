@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 import UIKit
 
-final class BeerImage: BindableObject {
+final class BeerImage: ObservableObject {
 
     private static let imageCache = NSCache<AnyObject, AnyObject>()
 
@@ -35,6 +35,7 @@ final class BeerImage: BindableObject {
         }
 
         do {
+
             let data = try Data(contentsOf: self.beerUrl)
 
             guard let image = UIImage(data: data) else {

@@ -9,19 +9,10 @@
 import Combine
 import SwiftUI
 
+final class BeerData: ObservableObject {
 
-final class BeerData: BindableObject {
-
-    var didChange = PassthroughSubject<BeerData,Never>()
-
-    private(set) var beers = [Beer]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.didChange.send(self)
-            }
-        }
-    }
-
+    @Published var beers = [Beer]()
+    
     init() {
         self.fetchBeers()
     }
@@ -29,11 +20,14 @@ final class BeerData: BindableObject {
     func fetchBeers() {
         PunkClient.shared.fetchBeers { result in
             switch result {
+                
                 case .failure(_):
                     break
-
+                
                 case .success(let response):
-                    self.beers = response
+                    DispatchQueue.main.async {
+                        self.beers = response
+                }
             }
         }
     }

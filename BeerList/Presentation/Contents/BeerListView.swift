@@ -10,7 +10,7 @@ import SwiftUI
 
 struct BeerListView : View {
 
-    @EnvironmentObject private var beerData: BeerData
+    @ObservedObject var beerData: BeerData = BeerData()
 
     var body: some View {
         NavigationView {
@@ -31,7 +31,7 @@ struct BeerListView : View {
 #if DEBUG
  struct BeerListView_Previews : PreviewProvider {
     static var previews: some View {
-        BeerListView().environmentObject(BeerData())
+        BeerListView(beerData: BeerData())
     }
  }
  #endif

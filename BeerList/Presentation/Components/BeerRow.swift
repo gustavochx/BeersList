@@ -13,18 +13,18 @@ struct BeerRow: View {
     var beer: Beer
 
     var body: some View {
-
         VStack(alignment: .center, spacing: 16) {
-            BeerRowImage(beerImage: BeerImage(beerUrl: beer.image_url))
+            BeerRowImage(beerImage: BeerImage(beerUrl: beer.getUrl()))
             VStack(alignment: .leading, spacing: 4) {
                 Text(beer.name)
-                    .color(.primary)
-                    .font(.headline)
+                    .font(.largeTitle)
+                    .foregroundColor(.black)
+                    .bold()
                 Text(beer.description)
-                    .font(.subheadline)
-                    .color(.secondary)
                     .multilineTextAlignment(.leading)
                     .lineLimit(2)
+                    .foregroundColor(.orange)
+                    .font(.system(size: 10))
                     .frame(height: 60)
             }
         }
@@ -34,12 +34,12 @@ struct BeerRow: View {
 
 struct BeerRowImage: View {
 
-    @State var beerImage: BeerImage
+    @State var beerImage: BeerImage?
 
     var body: some View {
         ZStack(alignment: .center) {
-            if (self.beerImage.image != nil) {
-                Image(uiImage: self.beerImage.image!)
+            if self.beerImage!.image != nil {
+                Image(uiImage: self.beerImage!.image!)
                     .resizable()
                     .renderingMode(.original)
                     .frame(width: 200, height: 200)
@@ -55,7 +55,7 @@ struct BeerRowImage: View {
                     .shadow(radius: 10)
             }
         }.onAppear {
-            self.beerImage.downloadImage()
+            self.beerImage!.downloadImage()
         }
     }
 }
