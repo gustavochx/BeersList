@@ -8,18 +8,16 @@
 
 import UIKit
 
-class BeersResponse: Decodable {
+struct BeersResponse: Decodable {
+    let id: Int
+    let name: String
+    let description: String
+    let imageUrl: String
     
-    var id: Int64
-    var name: String
-    var description: String
-    var image_url: String
-    
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case id = "id"
         case name = "name"
         case description = "description"
-        case image_url = "image_url"
+        case imageUrl = "image_url"
     }
-    
 }

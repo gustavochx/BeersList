@@ -6,7 +6,7 @@
 //  Copyright © 2019 Gustavo Henrique. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 enum APIError: Error {
 

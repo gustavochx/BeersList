@@ -11,20 +11,21 @@ import SwiftUI
 
 struct Beer: Hashable, Identifiable {
 
-    var id: Int64
-    var name: String
-    var description: String
-    var image_url: String
+    let id: Int
+    let name: String
+    let description: String
+    let imageUrl: String
     
     func getUrl() -> URL {
-        return URL(string: self.image_url)!
+        URL(string: self.imageUrl)!
     }
-    
 }
 
 extension Beer {
-
-    static var fake: Beer {
-        Beer(id: 1, name: "Buzz", description: "A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.", image_url: "https://images.punkapi.com/v2/keg.png")
+    static var fixture: Beer {
+        Beer(id: 1,
+             name: "Buzz",
+             description: "A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.",
+             imageUrl: "https://images.punkapi.com/v2/keg.png")
     }
 }

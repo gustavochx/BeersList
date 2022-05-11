@@ -35,27 +35,16 @@ final class BeerImage: ObservableObject {
         }
 
         do {
-
             let data = try Data(contentsOf: self.beerUrl)
-
             guard let image = UIImage(data: data) else {
                 return
             }
-
             BeerImage.imageCache.setObject(image, forKey: self.beerUrl.absoluteString  as AnyObject)
             DispatchQueue.main.async { [weak self] in
                 self?.image = image
             }
-
-        }catch {
+        } catch {
             print(error.localizedDescription)
         }
-
-
-
     }
-
-
-
-    
 }

@@ -1,5 +1,5 @@
 # BeersList
-- Example in SwiftUI Integrating with a API using UIKit
+- Example in SwiftUI Integrating with a API using URLSession with Delegates
 - Built with Xcode 11 Beta & macOS 10.15 Catalina
 
 [![Swift](https://img.shields.io/badge/Swift-5.1-orange.svg)](https://swift.org)

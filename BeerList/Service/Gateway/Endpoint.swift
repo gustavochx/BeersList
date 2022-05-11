@@ -6,11 +6,11 @@
 //  Copyright © 2019 Gustavo Henrique. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 protocol Endpoint {
-    var baseUrl: String {get}
-    var path: String {get}
+    var baseUrl: String { get }
+    var path: String { get }
 }
 
 extension Endpoint {

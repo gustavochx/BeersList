@@ -63,7 +63,7 @@ struct BeerRowImage: View {
 #if DEBUG
 struct BeerRow_Previews : PreviewProvider {
     static var previews: some View {
-        BeerRow(beer: Beer.fake)
+        BeerRow(beer: .fixture)
     }
 }
 #endif
