@@ -11,26 +11,27 @@ import SwiftUI
 
 final class BeerData: ObservableObject {
 
-    @Published var beers = [Beer]()
+    @Published var beers: [Beer]
     
     init() {
-        self.fetchBeers()
+        beers = []
+        fetchBeers()
     }
 
     func fetchBeers() {
-        PunkClient.shared.fetchBeers { result in
-            switch result {
-                
-                case .failure(_):
-                    break
-                
-                case .success(let response):
-                    DispatchQueue.main.async {
-                        self.beers = response
-                }
+        PunkClient.shared.fetchBeers { [weak self] result in
+            if case let .success(response) = result {
+                self?.beers = self?.map(from: response) ?? []
             }
         }
     }
 
+    private func map(from beersResponse: [BeersResponse]?) -> [Beer]? {
+        beersResponse?.compactMap {
+            Beer(id: $0.id,
+                 name: $0.name,
+                 description: $0.description,
+                 imageUrl: $0.imageUrl)
+        }
+    }
 }
-

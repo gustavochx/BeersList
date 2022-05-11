@@ -6,12 +6,11 @@
 //  Copyright © 2019 Gustavo Henrique. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 enum PunkEndpoint {
     case getBeers
 }
-
 
 extension PunkEndpoint: Endpoint {
     var baseUrl: String {
@@ -24,5 +23,4 @@ extension PunkEndpoint: Endpoint {
             return "/v2/beers"
         }
     }
-
 }

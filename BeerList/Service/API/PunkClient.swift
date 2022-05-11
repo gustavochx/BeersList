@@ -6,9 +6,9 @@
 //  Copyright © 2019 Gustavo Henrique. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class PunkClient: Client {
+final class PunkClient: Client {
 
     static let shared: PunkClient = PunkClient()
     let session: URLSession
@@ -21,14 +21,13 @@ class PunkClient: Client {
         self.init(.default)
     }
 
-    func fetchBeers(completionHandler: @escaping(Result<[Beer],APIError>) -> Void) {
-        fetch(using: PunkEndpoint.getBeers.get, decode: { (responseObject) -> [Beer]? in
-            guard let jsonObject = responseObject as? [Beer] else {
+    func fetchBeers(completionHandler: @escaping (Result<[BeersResponse]?,APIError>) -> Void) {
+        fetch(using: PunkEndpoint.getBeers.get,
+              decode: { (responseObject) -> [BeersResponse]? in
+            guard let jsonObject = responseObject as? [BeersResponse] else {
                 return nil
             }
             return jsonObject
         }, completionHandler: completionHandler)
     }
-
-
 }
